@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNALINK MVP-2C — Haptic Bridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">SIGNALINK · MVP-2C</p>
+      <h1>Audio → Haptic Bridge</h1>
+      <p class="intro">A test space for converting communication events into simple tactile patterns.</p>
+    </header>
+
+    <section class="card">
+      <div class="section-head">
+        <span>COMMUNICATION EVENT</span>
+        <span id="state">READY</span>
+      </div>
+
+      <div class="events">
+        <button data-event="HELLO">HELLO</button>
+        <button data-event="YES">YES</button>
+        <button data-event="STOP">STOP</button>
+      </div>
+
+      <div class="output">
+        <p class="label">TOKEN</p>
+        <strong id="token">—</strong>
+        <p class="label">HAPTIC PATTERN</p>
+        <div id="pattern" class="pattern">Select an event.</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <span>SIMULATED ACTUATOR</span>
+        <span>NO HARDWARE</span>
+      </div>
+      <div id="actuator" class="actuator">
+        <span id="pulse"></span>
+      </div>
+      <p id="description" class="meta">This represents a future vibration-motor output.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <span>TEST LOG</span>
+        <button id="clear" class="secondary">CLEAR</button>
+      </div>
+      <ol id="log" class="log"></ol>
+    </section>
+
+    <footer>Theory → Build → Measure → Explain → Hardware</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
